@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IBD Quiz App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- DARK MODE TOGGLE -->
+  <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">🌙</button>
+
+  <main class="main">
+
+    <!-- HOME BOX -->
+    <div class="home-box custom-box">
+      <div class="home-header">
+        <div class="home-logo">🍺</div>
+        <h1>IBD Quiz</h1>
+        <p class="home-subtitle">Institute of Brewing &amp; Distilling</p>
+      </div>
+      <div class="home-instructions">
+        <h3>📋 Instructions</h3>
+        <ul>
+          <li>Total Questions: <strong><span class="total-question"></span></strong></li>
+          <li>Each question has a <strong>45-second</strong> time limit</li>
+          <li>Select the best answer from the options given</li>
+          <li>You cannot change your answer once selected</li>
+          <li>Keep trying until you find the correct answer</li>
+          <li>Your results are shown at the end</li>
+        </ul>
+      </div>
+      <div class="home-topics">
+        <h3>📚 Topics Covered</h3>
+        <div class="topic-tags">
+          <span class="tag">Raw Materials</span>
+          <span class="tag">Malting</span>
+          <span class="tag">Mashing</span>
+          <span class="tag">Boiling &amp; Hops</span>
+          <span class="tag">Fermentation</span>
+          <span class="tag">Yeast Science</span>
+          <span class="tag">Filtration</span>
+          <span class="tag">Packaging</span>
+          <span class="tag">Quality Control</span>
+          <span class="tag">CIP &amp; Hygiene</span>
+          <span class="tag">Water Chemistry</span>
+          <span class="tag">Beer Styles</span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-start" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- QUIZ BOX -->
+    <div class="quiz-box custom-box hide">
+      <div class="quiz-header">
+        <div class="question-number"></div>
+        <div class="timer-box">
+          <span class="timer-label">⏱</span>
+          <span class="timer-count">45s</span>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+      </div>
+      <div class="question-text"></div>
+      <div class="option-container"></div>
+      <div class="quiz-footer">
+        <div class="next-question-btn">
+          <button type="button" class="btn" onclick="next()">Next →</button>
+        </div>
+        <div class="finish-question-btn">
+          <button type="button" class="btn btn-finish" onclick="finish()">Finish</button>
+        </div>
+      </div>
+      <div class="answers-indicator"></div>
+    </div>
+
+  </main>
+
+  <!-- RESULT BOX -->
+  <div class="result-box custom-box hide">
+    <div class="result-header">
+      <h1>Quiz Result</h1>
+      <div class="result-icon">🎓</div>
+    </div>
+    <div class="result-feedback"></div>
+    <table>
+      <tr>
+        <td>Total Questions</td>
+        <td><span class="total-question"></span></td>
+      </tr>
+      <tr>
+        <td>Attempted</td>
+        <td><span class="total-attempt"></span></td>
+      </tr>
+      <tr>
+        <td>✅ Correct</td>
+        <td><span class="total-correct"></span></td>
+      </tr>
+      <tr>
+        <td>❌ Wrong</td>
+        <td><span class="total-wrong"></span></td>
+      </tr>
+      <tr>
+        <td>Percentage</td>
+        <td><span class="percentage"></span></td>
+      </tr>
+      <tr class="score-row">
+        <td>Your Score</td>
+        <td><span class="total-score"></span></td>
+      </tr>
+    </table>
+    <div class="result-btns">
+      <button type="button" class="btn" onclick="tryAgainQuiz()">🔄 Try Again</button>
+      <button type="button" class="btn btn-home" onclick="goToHome()">🏠 Home</button>
+    </div>
+  </div>
+
+<script src="js/question.js"></script>
+<script src="js/app.js"></script>
+<script>
+  function toggleDarkMode(){
+    const isDark = document.body.classList.toggle("dark");
+    document.querySelector(".dark-toggle").innerHTML = isDark ? "☀️" : "🌙";
+    localStorage.setItem("darkMode", isDark ? "on" : "off");
+  }
+  // remember preference on reload
+  if(localStorage.getItem("darkMode") === "on"){
+    document.body.classList.add("dark");
+    document.querySelector(".dark-toggle").innerHTML = "☀️";
+  }
+</script>
+</body>
+</html>
