@@ -15,7 +15,7 @@
  let attempt = 0;
  let timerInterval = null;
  let timeLeft = 0;
- const QUESTION_TIME = 45;
+ const QUESTION_TIME = 90;
 
  function setAvailableQuestions(){
     const totalQuestion = quiz.length;
