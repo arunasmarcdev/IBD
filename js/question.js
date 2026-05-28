@@ -564,7 +564,7 @@ const quiz = [
   },
   {
     q: '112. Why do we oxygenate wort?',
-    options: ['To supply yeast with oxygen required to make sterols and fatty acids hence allow growth', 'To activate dried yeasត', 'To help form cold break', 'To increase the amount of nutrients in the wort'],
+    options: ['To supply yeast with oxygen required to make sterols and fatty acids hence allow growth', 'To activate dried yeast', 'To help form cold break', 'To increase the amount of nutrients in the wort'],
     answer:0,
   },
   {
