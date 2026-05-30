@@ -481,6 +481,12 @@ body.dark .result-box table .score-row td {
   background: #1a3a38;
   color: #4db6ac;
 }
+
+body.dark .feedback-excellent { background: #1a3a1a; color: #81c784; border-color: #2e7d32; }
+body.dark .feedback-good      { background: #1a2a3a; color: #90caf9; border-color: #1565c0; }
+body.dark .feedback-average   { background: #3a2a10; color: #ffcc80; border-color: #e65100; }
+body.dark .feedback-poor      { background: #3a1a20; color: #f48fb1; border-color: #880e4f; }
+
 /* ======= CREDITS ======= */
 .credits {
   text-align: center;
@@ -500,7 +506,4 @@ body.dark .credits {
 body.dark .credits span {
   color: #4db6ac;
 }
-body.dark .feedback-excellent { background: #1a3a1a; color: #81c784; border-color: #2e7d32; }
-body.dark .feedback-good      { background: #1a2a3a; color: #90caf9; border-color: #1565c0; }
-body.dark .feedback-average   { background: #3a2a10; color: #ffcc80; border-color: #e65100; }
-body.dark .feedback-poor      { background: #3a1a20; color: #f48fb1; border-color: #880e4f; }
+
