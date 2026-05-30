@@ -481,7 +481,25 @@ body.dark .result-box table .score-row td {
   background: #1a3a38;
   color: #4db6ac;
 }
-
+/* ======= CREDITS ======= */
+.credits {
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  color: #aaa;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+.credits span {
+  color: #009688;
+  font-weight: 700;
+}
+body.dark .credits {
+  color: #666;
+}
+body.dark .credits span {
+  color: #4db6ac;
+}
 body.dark .feedback-excellent { background: #1a3a1a; color: #81c784; border-color: #2e7d32; }
 body.dark .feedback-good      { background: #1a2a3a; color: #90caf9; border-color: #1565c0; }
 body.dark .feedback-average   { background: #3a2a10; color: #ffcc80; border-color: #e65100; }
